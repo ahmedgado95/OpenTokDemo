@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		71C41753AE9CC3537B1AA747 /* Pods_OpenTokDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F004CCE3D24C362F864109 /* Pods_OpenTokDemo.framework */; };
 		F861C4EA2520545C007B177C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F861C4E92520545C007B177C /* AppDelegate.swift */; };
 		F861C4EC2520545C007B177C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F861C4EB2520545C007B177C /* SceneDelegate.swift */; };
 		F861C4EE2520545C007B177C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F861C4ED2520545C007B177C /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06F004CCE3D24C362F864109 /* Pods_OpenTokDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OpenTokDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		14FC0CFE913F547FD2790F66 /* Pods-OpenTokDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenTokDemo.release.xcconfig"; path = "Target Support Files/Pods-OpenTokDemo/Pods-OpenTokDemo.release.xcconfig"; sourceTree = "<group>"; };
+		D0CBBC7B6C79988AAFB0CA5D /* Pods-OpenTokDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenTokDemo.debug.xcconfig"; path = "Target Support Files/Pods-OpenTokDemo/Pods-OpenTokDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		F861C4E62520545C007B177C /* OpenTokDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenTokDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F861C4E92520545C007B177C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F861C4EB2520545C007B177C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71C41753AE9CC3537B1AA747 /* Pods_OpenTokDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		75FBAE505E9CA2CB72AC3CA3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				06F004CCE3D24C362F864109 /* Pods_OpenTokDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C4212BBE01B454539A4A89DB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D0CBBC7B6C79988AAFB0CA5D /* Pods-OpenTokDemo.debug.xcconfig */,
+				14FC0CFE913F547FD2790F66 /* Pods-OpenTokDemo.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F861C4DD2520545C007B177C = {
 			isa = PBXGroup;
 			children = (
 				F861C4E82520545C007B177C /* OpenTokDemo */,
 				F861C4E72520545C007B177C /* Products */,
+				C4212BBE01B454539A4A89DB /* Pods */,
+				75FBAE505E9CA2CB72AC3CA3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +99,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F861C4FA25205462007B177C /* Build configuration list for PBXNativeTarget "OpenTokDemo" */;
 			buildPhases = (
+				B84EB4F950835B7E1C536246 /* [CP] Check Pods Manifest.lock */,
 				F861C4E22520545C007B177C /* Sources */,
 				F861C4E32520545C007B177C /* Frameworks */,
 				F861C4E42520545C007B177C /* Resources */,
@@ -132,6 +158,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B84EB4F950835B7E1C536246 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OpenTokDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F861C4E22520545C007B177C /* Sources */ = {
@@ -282,6 +333,7 @@
 		};
 		F861C4FB25205462007B177C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0CBBC7B6C79988AAFB0CA5D /* Pods-OpenTokDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +352,7 @@
 		};
 		F861C4FC25205462007B177C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14FC0CFE913F547FD2790F66 /* Pods-OpenTokDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
